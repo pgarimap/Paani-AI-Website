@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
@@ -241,7 +241,14 @@ function Home() {
  * - 'title': bold text on flip side
  * - 'text': paragraph (JSX) on the flip side
  */
-function FlipCard({ image, title, text }) {
+// Define TypeScript interface for FlipCard props
+interface FlipCardProps {
+  image: string;
+  title: string;
+  text: JSX.Element | string; // Accepts JSX or plain string
+}
+
+function FlipCard({ image, title, text }: FlipCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = () => {
@@ -249,22 +256,22 @@ function FlipCard({ image, title, text }) {
   };
 
   return (
-    <div
-      className={`flip-card ${isFlipped ? 'flipped' : ''}`}
-      onClick={handleClick}
-    >
-      <div className="flip-card-inner">
-        {/* FRONT */}
-        <div className="flip-card-front">
-          <img src={image} alt={title} />
-        </div>
-        {/* BACK */}
-        <div className="flip-card-back">
-          <strong>{title}</strong>
-          <p>{text}</p>
+      <div
+          className={`flip-card ${isFlipped ? 'flipped' : ''}`}
+          onClick={handleClick}
+      >
+        <div className="flip-card-inner">
+          {/* FRONT */}
+          <div className="flip-card-front">
+            <img src={image} alt={title} />
+          </div>
+          {/* BACK */}
+          <div className="flip-card-back">
+            <strong>{title}</strong>
+            <p>{text}</p>
+          </div>
         </div>
       </div>
-    </div>
   );
 }
 
