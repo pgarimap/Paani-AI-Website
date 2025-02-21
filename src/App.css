@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden; /* Hide horizontal scroll if any overflow */
+  width: 100%;
 }
 *, *::before, *::after {
   box-sizing: inherit;

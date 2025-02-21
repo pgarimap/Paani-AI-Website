@@ -6,9 +6,9 @@ function Home() {
   return (
     <div className="App">
       {/* Navigation Bar */}
-      <nav className="navbar">
-        <div className="navbar-brand">Paani AI</div>
-      </nav>
+      {/*<nav className="navbar">*/}
+      {/*  <div className="navbar-brand">Paani AI</div>*/}
+      {/*</nav>*/}
 
       {/* Hero Section */}
       <header className="hero-section">
