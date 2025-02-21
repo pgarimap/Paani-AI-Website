@@ -10,7 +10,7 @@ const DigitalizingNepalWater: React.FC = () => {
 
       {/* Intro Image (Placeholder) */}
       <img
-        src="https://via.placeholder.com/900x400"
+        src="/images/Research.png"
         alt="Digitalization in Water Management"
         style={{ width: '100%', height: 'auto', borderRadius: '4px', marginBottom: '2rem' }}
       />

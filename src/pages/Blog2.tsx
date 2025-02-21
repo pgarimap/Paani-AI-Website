@@ -19,7 +19,7 @@ const ScadaSystem: React.FC = () => {
 
       {/* Placeholder Image */}
       <img
-        src="https://via.placeholder.com/900x400"
+        src="images/nepal_water_resources.png"
         alt="SCADA System Overview"
         style={{ width: '100%', height: 'auto', borderRadius: '4px', margin: '2rem 0' }}
       />
@@ -65,7 +65,7 @@ const ScadaSystem: React.FC = () => {
 
       {/* Placeholder Image */}
       <img
-        src="https://via.placeholder.com/900x300"
+        src="images/scada.png"
         alt="SCADA in Action"
         style={{ width: '100%', height: 'auto', borderRadius: '4px', margin: '2rem 0' }}
       />

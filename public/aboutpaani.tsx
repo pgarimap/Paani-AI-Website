@@ -26,7 +26,7 @@ const AboutPaani: React.FC = () => {
 
       {/* Placeholder image; replace with your own source */}
       <img
-        src="https://via.placeholder.com/600x300"
+        src="/images/nepal_water_resources.png"
         alt="Nepal Water Resource"
         style={{ marginTop: '1rem', width: '100%', height: 'auto', borderRadius: '4px' }}
       />

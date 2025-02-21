@@ -153,7 +153,7 @@ function Home() {
         <div className="blogs-container">
           <div className="blog">
             <img
-              src="https://via.placeholder.com/300x150"
+              src="/images/digitizing_water.png"
               alt="blog1"
               className="blog-image"
             />
@@ -166,7 +166,7 @@ function Home() {
           </div>
           <div className="blog">
             <img
-              src="https://via.placeholder.com/300x150"
+              src="/images/scada.png"
               alt="blog2"
               className="blog-image"
             />
@@ -204,32 +204,32 @@ function Home() {
         <h2>Contact Us</h2>
         <p>
           Have questions or want to learn more about Paani AI?
-          Send us a message, and we'll get back to you soon.
+          Email us at garima.acharya[at]gmail[dot]com, and we'll get back to you soon.
         </p>
 
-        <form className="contact-form">
-          <input
-            type="text"
-            className="contact-input"
-            placeholder="Name"
-          />
-          <input
-            type="email"
-            className="contact-input"
-            placeholder="Email"
-          />
-          <textarea
-            rows={4}
-            className="contact-textarea"
-            placeholder="Message"
-          />
-          <button
-            type="submit"
-            className="contact-submit"
-          >
-            Submit
-          </button>
-        </form>
+        {/*<form className="contact-form">*/}
+        {/*  <input*/}
+        {/*    type="text"*/}
+        {/*    className="contact-input"*/}
+        {/*    placeholder="Name"*/}
+        {/*  />*/}
+        {/*  <input*/}
+        {/*    type="email"*/}
+        {/*    className="contact-input"*/}
+        {/*    placeholder="Email"*/}
+        {/*  />*/}
+        {/*  <textarea*/}
+        {/*    rows={4}*/}
+        {/*    className="contact-textarea"*/}
+        {/*    placeholder="Message"*/}
+        {/*  />*/}
+        {/*  <button*/}
+        {/*    type="submit"*/}
+        {/*    className="contact-submit"*/}
+        {/*  >*/}
+        {/*    Submit*/}
+        {/*  </button>*/}
+        {/*</form>*/}
       </section>
     </div>
   );
