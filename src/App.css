@@ -1,0 +1,333 @@
+/***** 1. GLOBAL RESET *****/
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Hide horizontal scroll if any overflow */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/***** 2. BASE APP STYLING *****/
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/***** 3. NAVBAR *****/
+.navbar {
+  background-color: #000;
+  padding: 1rem;
+}
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/***** 4. HERO SECTION *****/
+.hero-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+.hero-image {
+  margin: 0.5rem auto 1rem;
+  border-radius: 8px;
+}
+.hero-button {
+  background-color: #5b82ff;
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hero-button:hover {
+  background-color: #4a6ed8;
+}
+
+/***** 5. HOW PAANI TRANSFORMS SECTION *****/
+.transform-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.transform-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/***** 6. PHASES SECTION (Phase 1 & Phase 2) *****/
+.phases-section {
+  /* Light gradient background for an artistic look */
+  background: linear-gradient(120deg, #f0f4f9, #ffffff);
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.phase-main-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Phase 1 Container */
+.phase1-container {
+  max-width: 1100px;
+  margin: 0 auto 3rem auto; /* bottom margin for spacing before Phase 2 */
+}
+.phase1-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #2a54c8;
+}
+
+/* Single row of flip cards (Phase 1) */
+.flip-cards-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: nowrap;  /* Force a single row */
+  overflow-x: auto;   /* Horizontal scroll if smaller screen */
+  padding-bottom: 1rem;
+}
+
+/***** 7. FLIP CARD STYLES *****/
+.flip-card {
+  width: 250px;
+  height: 300px;
+  perspective: 1000px; /* for 3D flip */
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 8px;
+
+  /* BLACK shadow for the card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+.flip-card:hover {
+  transform: scale(1.03);
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT: White background w/ image */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+.flip-card-front {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flip-card-front img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* BACK: Black background, white text, bold in blue */
+.flip-card-back {
+  transform: rotateY(180deg);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+
+/***** PHASE 2 *****/
+.phase2 {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.phase2 h3 {
+  font-size: 1.8rem;
+  color: #2a54c8;
+  margin-bottom: 1rem;
+}
+.phase2 p {
+  color: #444;
+  margin-bottom: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* The row that holds the services under Phase 2 */
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/***** Each Service Card *****/
+.service {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.service h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.service-title {
+  color: #2a54c8;
+  text-decoration: none;
+}
+.service-title:hover {
+  text-decoration: underline;
+}
+
+/***** 8. BLOG SECTION *****/
+.blog-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f0f0f0;
+}
+.blog-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.blogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.blog {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.blog-image {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.blog h3 {
+  margin: 0.5rem 0;
+}
+.blog p {
+  color: #333;
+  font-size: 0.95rem;
+}
+.blog-link {
+  color: #2a54c8;
+  text-decoration: none;
+}
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+/***** 9. TEAM SECTION *****/
+.team-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.team-member img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/***** 10. CONTACT US SECTION *****/
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+.contact-submit {
+  background-color: #5b82ff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.contact-submit:hover {
+  background-color: #4a6ed8;
+}
